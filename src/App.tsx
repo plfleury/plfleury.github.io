@@ -1,11 +1,27 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SideBar from "./components/SideBar";
+import Character from "./pages/Character";
+import Skills from './pages/Skills';
+import Quests from './pages/Quests';
+import Contact from './pages/Contact';
 
 function App() {
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-900">
-      <h1 className="text-4xl font-bold">Mon CV en React</h1>
-    </div>
+    <BrowserRouter>
+      <SideBar />
+      <div>
+        <main>
+          <Routes>
+            <Route path="/plfleury.github.io" element={<Character />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/quests" element={<Quests />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   )
 }
 
