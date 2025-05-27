@@ -1,4 +1,4 @@
-import React, { type CSSProperties } from "react";
+import { type CSSProperties } from "react";
 import { NavLink } from "react-router-dom";
 import { User, Sword, Scroll, Mail } from "lucide-react"; // ou toute autre lib d'icônes
 
