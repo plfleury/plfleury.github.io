@@ -14,7 +14,7 @@ function App() {
       <div>
         <main>
           <Routes>
-            <Route path="/plfleury.github.io" element={<Character />} />
+            <Route path="/" element={<Character />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/quests" element={<Quests />} />
             <Route path="/contact" element={<Contact />} />

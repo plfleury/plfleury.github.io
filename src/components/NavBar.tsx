@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { User, Sword, Scroll, Mail } from "lucide-react"; // ou toute autre lib d'icônes
 
 const links = [
-  { to: "/plfleury.github.io", icon: <User />, label: "Personnage" },
+  { to: "/", icon: <User />, label: "Personnage" },
   { to: "/skills", icon: <Sword />, label: "Compétences" },
   { to: "/quests", icon: <Scroll />, label: "Quêtes" },
   { to: "/contact", icon: <Mail />, label: "Contact" },
