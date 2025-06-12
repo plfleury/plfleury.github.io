@@ -14,11 +14,11 @@ const Quests = () => (
       <h2 style={styles.title}>Quêtes Accomplies</h2>
       <ul>
         <li>
-          <strong>💼 Batchs d'intégrations de données (Projet Total Energies)</strong><br />
+          <strong>📥 Batchs d'intégrations de données (Projet Total Energies)</strong><br />
           Création de batchs d'intégrations de données via SQL Server et Entity Framework.
         </li>
         <li>
-          <strong>💼 Ecran ETRM (Projet Total Energies)</strong><br />
+          <strong>📈 Ecran ETRM (Projet Total Energies)</strong><br />
           Création et mise à jour d'écrans du logiciel de trading de Total Energies (C#/.Net/Entity Framework/SQL/WinForm).
         </li>
         <li>

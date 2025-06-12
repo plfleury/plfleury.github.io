@@ -5,6 +5,7 @@ import Character from "./pages/Character";
 import Skills from './pages/Skills';
 import Quests from './pages/Quests';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/quests" element={<Quests />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </div>
