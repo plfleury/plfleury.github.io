@@ -7,6 +7,7 @@ import Skills from './pages/Skills';
 import Quests from './pages/Quests';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import Aventure from './pages/Aventure';
 
 function App() {
   const [layout, setLayout] = useState<"vertical" | "horizontal" | "verticalWithText">("vertical");
@@ -43,6 +44,7 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/quests" element={<Quests />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/aventure" element={<Aventure />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
+
 const Quests = () => (
   <section style={styles.section}>
       <h2 style={styles.title}>Quêtes en cours</h2>
       <ul>
         <li>
           <strong>🎲 Aventure (Projet perso)</strong><br />
-          Création d'un jeu de quêtes textuelles avec géolocalisation en temps réel (Mapbox) en React-Native + API Node.
+          Création d'un jeu de quêtes textuelles avec géolocalisation en temps réel (Mapbox) en React-Native + API Node.<br />
+          <Link to={"/aventure"}>Version d'exemple web</Link>
         </li>
         <li>
           <strong>🎨 Portfolio Créatif (Projet perso)</strong><br />
