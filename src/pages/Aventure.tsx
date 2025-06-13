@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import "./Aventure.css"; // Pour les styles, voir ci-dessous
+import FakeMap from "../assets/fake-map.jpg";
+import Avatar from "../assets/avatar.jpg";
 
 export default function Aventure() {
   const [tab, setTab] = useState<"carte" | "perso">("carte");
@@ -33,7 +35,7 @@ function CarteScreen() {
         </div>
         <div className="hearts">❤️❤️❤️</div>
       </div> */}
-      <img src="/src/assets/fake-map.jpg" alt="Carte" className="map-image" />
+      <img src={FakeMap} alt="Carte" className="map-image" />
     </div>
   );
 }
@@ -43,7 +45,7 @@ function PersoScreen() {
     <div className="perso-screen">
       <h2>Personnage</h2>
       <div className="avatar-wrapper">
-        <img src="/src/assets/avatar.jpg" alt="Avatar" className="avatar" />
+        <img src={Avatar} alt="Avatar" className="avatar" />
         <button className="edit-avatar">Changer avatar</button>
       </div>
       <div className="info">
