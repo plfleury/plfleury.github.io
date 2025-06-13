@@ -1,3 +1,4 @@
+import './SideBar.css'
 import { type CSSProperties } from "react";
 import { NavLink } from "react-router-dom";
 import { User, Sword, Scroll, Mail } from "lucide-react"; // ou toute autre lib d'icônes
@@ -9,10 +10,22 @@ const links = [
   { to: "/contact", icon: <Mail />, label: "Contact" },
 ];
 
-export default function SideBar() {
+export default function SideBar({ layout }: { layout: "vertical" | "horizontal" | "verticalWithText" }) {
   return (
-    <aside style={styles.sidebar}>
-      <nav style={styles.nav}>
+    <div
+      id="sidebar"
+      style={{
+        ...styles.sidebar,
+        ...(layout === "horizontal" ? styles.horizontalSidebar : {}),
+        ...(layout === "verticalWithText" ? styles.verticalWithTextSidebar : {}),
+      }}
+    >
+      <nav
+        style={{
+          ...styles.nav,
+          ...(layout === "horizontal" ? styles.horizontalNav : {}),
+        }}
+      >
         {links.map(({ to, icon, label }) => (
           <NavLink
             key={to}
@@ -22,35 +35,44 @@ export default function SideBar() {
               ...(isActive ? styles.activeLink : {}),
             })}
           >
-            <span style={styles.icon}>{icon}</span>
-            <span>{label}</span>
+            {icon}
+            {layout === "verticalWithText" && <span>{label}</span>}
           </NavLink>
         ))}
       </nav>
-    </aside>
+    </div>
   );
 }
 
 // 🎨 Styles inline, à adapter ou extraire en CSS module
 const styles: { [key: string]: CSSProperties } = {
   sidebar: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    height: "100vh",
-    width: "200px",
-    backgroundColor: "#1c1b29", // sombre, type RPG
-    color: "#eee",
+    flexShrink: 0,
     padding: "20px",
     boxShadow: "2px 0 10px rgba(0,0,0,0.5)",
-    fontFamily: "'Press Start 2P', sans-serif", // tu peux charger une police pixel via Google Fonts
+    fontFamily: "'Press Start 2P', sans-serif",
+  },
+  horizontalSidebar: {
+    width: "auto",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
+    padding: "5px 0",
+    order: 1, // Place la sidebar en bas dans le flux flex
+  },
+  verticalWithTextSidebar: {
+    width: "200px",
   },
   nav: {
     display: "flex",
-    height: "100%",
-    justifyContent: "center",
     flexDirection: "column",
     gap: "20px",
+  },
+  horizontalNav: {
+    flexDirection: "row",
+    gap: "0px",
+    justifyContent: "space-around",
+    alignItems: "center",
   },
   link: {
     display: "flex",
@@ -66,8 +88,5 @@ const styles: { [key: string]: CSSProperties } = {
   activeLink: {
     backgroundColor: "rgba(51, 145, 87, 0.49)",
     color: "rgba(0, 184, 126, 0.99)",
-  },
-  icon: {
-    fontSize: "18px",
   },
 };

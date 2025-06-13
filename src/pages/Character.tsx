@@ -3,7 +3,6 @@ const Character = () => (
     <h2 style={styles.title}>Fiche de Personnage</h2>
     <ul style={styles.list}>
       <li><strong>Nom :</strong> Paul Fleury</li>
-      <li><strong>Race :</strong> Hobbit</li>
       <li><strong>Classe :</strong> Dév Full Stack</li>
       <li><strong>Niveau :</strong> 7</li>
       <li><strong>Alignement :</strong> Pragmatique Curieux</li>

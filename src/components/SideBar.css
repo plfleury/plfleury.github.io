@@ -1,0 +1,11 @@
+#sidebar {
+    background-color: #1c1b29;
+    color: #eee;
+}
+
+@media (prefers-color-scheme: light) {
+    #sidebar {
+      background-color: #4f4c72;
+      color: #000000;
+    }
+  }
